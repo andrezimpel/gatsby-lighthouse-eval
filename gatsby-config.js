@@ -10,6 +10,12 @@ module.exports = {
     "gatsby-plugin-sharp",
     "gatsby-transformer-sharp",
     {
+      resolve: "gatsby-plugin-webpack-bundle-analyser-v2",
+      options: {
+        analyzerMode: "static",
+      },
+    },
+    {
       resolve: "gatsby-source-filesystem",
       options: {
         name: "images",
