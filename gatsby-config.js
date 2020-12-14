@@ -1,10 +1,12 @@
 module.exports = {
+  siteMetadata: {
+    siteUrl: `http://localhost:800`,
+  },
   plugins: [
     "gatsby-plugin-sass",
     "gatsby-plugin-image",
     "gatsby-plugin-react-helmet",
     "gatsby-plugin-sitemap",
-    "gatsby-plugin-manifest",
     "gatsby-plugin-sharp",
     "gatsby-transformer-sharp",
     {
