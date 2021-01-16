@@ -1,13 +1,11 @@
-import * as React from "react"
-import { useState } from "react"
+import React from "react"
 import { Helmet } from "react-helmet"
 import "bootstrap/dist/css/bootstrap.min.css"
-import "katex/dist/katex.min.css"
-import styles from "../styles/index-page.module.scss"
+//import "katex/dist/katex.min.css"
+import Header from "../components/header"
 import Footer from "../components/footer"
 
 const IndexPage = () => {
-  const [hover, setHover] = useState(false)
   return (
     <>
       <Helmet>
@@ -18,50 +16,7 @@ const IndexPage = () => {
           content="Evaluation of Gatsby Lighthouse Scores"
         />
       </Helmet>
-      <header className={`container ${styles.header}`}>
-        <div className="row align-items-center">
-          <div className="col col-xl">
-            <div>Header Graphic</div>
-          </div>
-          <div className={styles.headerLinks} role="menu">
-            <div
-              className="hoverWrapper"
-              role="menuitem"
-              onMouseEnter={() => {
-                setHover(true)
-              }}
-              onMouseLeave={() => {
-                setHover(false)
-              }}
-            >
-              <span>Hover Me</span>
-            </div>
-            <a class="d-none d-lg-inline-block" href="/topic-one">
-              Topic One
-            </a>
-            <a class="d-none d-lg-inline-block" href="/topic-two">
-              Topic Two
-            </a>
-            <a class="d-none d-lg-inline-block" href="/topic-three">
-              Topic Three
-            </a>
-            <a class="d-none d-lg-inline-block" href="/topic-four">
-              Topic Four
-            </a>
-          </div>
-        </div>
-      </header>
-      <div
-        className={`${hover ? `${styles.dropdownMenuHovered} ` : ""}${
-          styles.dropdownMenu
-        }`}
-      >
-        <div className="row">
-          <div className="col-4">Column One</div>
-          <div className="col-4">Column Two</div>
-          <div className="col-4">Column Three</div>
-        </div>
-      </div>
+      <Header />
       <main>
         <div className="container">
           <div className="row">
