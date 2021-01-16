@@ -1,20 +1,8 @@
 module.exports = {
   siteMetadata: {
-    siteUrl: `http://localhost:800`,
+    siteUrl: "http://localhost:9000",
   },
   plugins: [
-    "gatsby-plugin-sass",
-    "gatsby-plugin-image",
-    "gatsby-plugin-react-helmet",
-    "gatsby-plugin-sitemap",
-    "gatsby-plugin-sharp",
-    "gatsby-transformer-sharp",
-    {
-      resolve: "gatsby-plugin-webpack-bundle-analyser-v2",
-      options: {
-        analyzerMode: "static",
-      },
-    },
     {
       resolve: "gatsby-source-filesystem",
       options: {
@@ -23,5 +11,27 @@ module.exports = {
       },
       __key: "images",
     },
+    "gatsby-plugin-sass",
+    "gatsby-plugin-react-helmet",
+    "gatsby-plugin-sitemap",
+    "gatsby-plugin-sharp",
+    "gatsby-transformer-sharp",
+    {
+      resolve: `gatsby-plugin-purgecss`,
+      options: {
+        printRejected: false,
+        ignore: ["katex/dist/katex.min.css"],
+      },
+    },
+    "gatsby-plugin-preact",
   ],
-};
+}
+
+/**
+ * {
+      resolve: "gatsby-plugin-webpack-bundle-analyser-v2",
+      options: {
+        analyzerMode: "static",
+      },
+    },
+*/

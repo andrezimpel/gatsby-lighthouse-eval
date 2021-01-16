@@ -1,110 +1,90 @@
-import * as React from "react";
-import { Helmet } from "react-helmet";
+import * as React from "react"
+import { useState } from "react"
+import { Helmet } from "react-helmet"
+import "bootstrap/dist/css/bootstrap.min.css"
+import "katex/dist/katex.min.css"
+import styles from "../styles/index-page.module.scss"
 
-// styles
-const pageStyles = {
-  color: "#232129",
-  padding: "96px",
-  fontFamily: "-apple-system, Roboto, sans-serif, serif",
-};
-const headingStyles = {
-  marginTop: 0,
-  marginBottom: 64,
-  maxWidth: 320,
-};
-const headingAccentStyles = {
-  color: "#663399",
-};
-const paragraphStyles = {
-  marginBottom: 48,
-};
-const codeStyles = {
-  color: "#8A6534",
-  padding: 4,
-  backgroundColor: "#FFF4DB",
-  fontSize: "1.25rem",
-  borderRadius: 4,
-};
-const listStyles = {
-  marginBottom: 96,
-  paddingLeft: 0,
-  listStyleType: "none",
-};
-const listItemStyles = {
-  marginBottom: 12,
-  fontWeight: "300",
-  letterSpacing: 1,
-};
-const linkStyles = {
-  color: "#8954A8",
-};
-
-// data
-const links = [
-  {
-    text: "Documentation",
-    url: "https://www.gatsbyjs.com/docs/",
-  },
-  {
-    text: "Tutorials",
-    url: "https://www.gatsbyjs.com/tutorial/",
-  },
-  {
-    text: "Guides",
-    url: "https://www.gatsbyjs.com/tutorial/",
-  },
-  {
-    text: "API Reference",
-    url: "https://www.gatsbyjs.com/docs/api-reference/",
-  },
-  {
-    text: "Plugin Library",
-    url: "https://www.gatsbyjs.com/plugins",
-  },
-  {
-    text: "Cheat Sheet",
-    url: "https://www.gatsbyjs.com/docs/cheat-sheet/",
-  },
-];
-
-// markup
 const IndexPage = () => {
+  const [hover, setHover] = useState(false)
   return (
-    <main style={pageStyles}>
+    <>
       <Helmet>
         <html lang="en" />
-        <title>Home Page</title>
+        <title>Gatsby | Test Page</title>
+        <meta
+          name="description"
+          content="Evaluation of Gatsby Lighthouse Scores"
+        />
       </Helmet>
-
-      <h1 style={headingStyles}>
-        Congratulations
-        <br />
-        <span style={headingAccentStyles}>— you just made a Gatsby site!</span>
-        <span role="img" aria-label="Party popper emojis">
-          🎉🎉🎉
-        </span>
-      </h1>
-      <p style={paragraphStyles}>
-        Edit <code style={codeStyles}>src/pages/index.js</code> to see this page
-        update in real-time.{" "}
-        <span role="img" aria-label="Sunglasses smiley emoji">
-          😎
-        </span>
-      </p>
-      <ul style={listStyles}>
-        {links.map((link) => (
-          <li style={listItemStyles}>
-            <a
-              style={linkStyles}
-              href={`${link.url}?utm_source=starter&utm_medium=start-page&utm_campaign=minimal-starter`}
+      <header className={styles.header}>
+        <div className="row align-items-center">
+          <div className="col col-xl">
+            <div>Header Graphic</div>
+          </div>
+          <div className={styles.headerLinks} role="menu">
+            <div
+              className="hoverWrapper"
+              role="menuitem"
+              onMouseEnter={() => {
+                setHover(true)
+              }}
+              onMouseLeave={() => {
+                setHover(false)
+              }}
             >
-              {link.text}
+              <span>Hover Me</span>
+            </div>
+            <a class="d-none d-lg-inline-block" href="/topic-one">
+              Topic One
             </a>
-          </li>
-        ))}
-      </ul>
-    </main>
-  );
-};
+            <a class="d-none d-lg-inline-block" href="/topic-two">
+              Topic Two
+            </a>
+            <a class="d-none d-lg-inline-block" href="/topic-three">
+              Topic Three
+            </a>
+            <a class="d-none d-lg-inline-block" href="/topic-four">
+              Topic Four
+            </a>
+          </div>
+        </div>
+      </header>
+      <div
+        className={`${hover ? `${styles.dropdownMenuHovered} ` : ""}${
+          styles.dropdownMenu
+        }`}
+      >
+        <div className="row">
+          <div className="col-4">Column One</div>
+          <div className="col-4">Column Two</div>
+          <div className="col-4">Column Three</div>
+        </div>
+      </div>
+      <main>
+        <div className="container">
+          <div className="row">
+            <div className="col col-12">
+              <h1>Gatsby/Preact &amp; Bootstrap Speed Test</h1>
+            </div>
+          </div>
+          <div className="row">
+            <div className="col col-3 d-none d-md-block">
+              <span>Side Nav</span>
+            </div>
+            <div className="col col-9-md">
+              <section>Content Section</section>
+            </div>
+          </div>
+        </div>
+      </main>
+      <footer>
+        <div className="row">
+          <div className="col col-3">Footer Links</div>
+        </div>
+      </footer>
+    </>
+  )
+}
 
-export default IndexPage;
+export default IndexPage
