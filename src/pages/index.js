@@ -4,6 +4,7 @@ import { Helmet } from "react-helmet"
 import "bootstrap/dist/css/bootstrap.min.css"
 import "katex/dist/katex.min.css"
 import styles from "../styles/index-page.module.scss"
+import Footer from "../components/footer"
 
 const IndexPage = () => {
   const [hover, setHover] = useState(false)
@@ -17,7 +18,7 @@ const IndexPage = () => {
           content="Evaluation of Gatsby Lighthouse Scores"
         />
       </Helmet>
-      <header className={styles.header}>
+      <header className={`container ${styles.header}`}>
         <div className="row align-items-center">
           <div className="col col-xl">
             <div>Header Graphic</div>
@@ -64,7 +65,7 @@ const IndexPage = () => {
       <main>
         <div className="container">
           <div className="row">
-            <div className="col col-12">
+            <div className="col col-12 my-5">
               <h1>Gatsby/Preact &amp; Bootstrap Speed Test</h1>
             </div>
           </div>
@@ -78,11 +79,7 @@ const IndexPage = () => {
           </div>
         </div>
       </main>
-      <footer>
-        <div className="row">
-          <div className="col col-3">Footer Links</div>
-        </div>
-      </footer>
+      <Footer />
     </>
   )
 }
