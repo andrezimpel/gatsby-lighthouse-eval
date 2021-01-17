@@ -32,11 +32,11 @@ function Footer() {
 
 function LinkColumn({ links }) {
   return (
-    <div className="col col-3">
+    <div className="col-auto">
       {links.map((link) => {
         const url = link.label.replace(" ", "-").toLowerCase()
         return (
-          <a key={url} href={url}>
+          <a key={url} href={url} className="d-block mb-3">
             {link.label}
           </a>
         )
