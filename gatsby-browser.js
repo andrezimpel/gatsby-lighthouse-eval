@@ -12,9 +12,10 @@ function initGTM() {
 
   const gtmScript = document.createElement("script")
 
+  console.log(process.env)
   gtmScript.type = "text/javascript"
   gtmScript.async = true
-  gtmScript.src = `https://www.googletagmanager.com/gtm.js?id=${process.env.GA_TRACKING_ID}`
+  gtmScript.src = `https://www.googletagmanager.com/gtm.js?id=${process.env.GATSBY_GTM_TRACKING_ID}`
 
   gtmScript.onload = function () {
     const dataLayer = window.dataLayer

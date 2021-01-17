@@ -96,7 +96,9 @@ const IndexPage = () => {
                       <li>
                         <del>Video Component</del>
                       </li>
-                      <li>Use an actual GTM ID</li>
+                      <li>
+                        <del>Use an actual GTM ID</del>
+                      </li>
                       <li>
                         Get the KaTex parsing the page after it has loaded.
                       </li>
