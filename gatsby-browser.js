@@ -26,10 +26,10 @@ function initGTM() {
     })
   }
 
-  //document.head.appendChild(gtmScript)
+  document.head.appendChild(gtmScript)
 
   const katexScript = document.createElement("script")
-  // Add Katex Script here too
+  // Add Katex CSS here too if desired
 
   katexScript.type = "text/javascript"
   katexScript.async = true
@@ -40,7 +40,7 @@ function initGTM() {
     renderMathInElement(document.body)
   }
 
-  //document.head.appendChild(katexScript)
+  document.head.appendChild(katexScript)
 }
 
 exports.onClientEntry = function () {
