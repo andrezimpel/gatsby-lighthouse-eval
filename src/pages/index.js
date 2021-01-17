@@ -32,7 +32,13 @@ const IndexPage = () => {
           </div>
           <div className="row">
             <div className="col col-3 d-none d-md-block">
-              <span>Side Nav</span>
+              <ul className="list-group">
+                <li className="list-group-item">Nav Option One</li>
+                <li className="list-group-item">Nav Option Two</li>
+                <li className="list-group-item">Nav Option Three</li>
+                <li className="list-group-item">Nav Option Four</li>
+                <li className="list-group-item">Nav Option Five</li>
+              </ul>
             </div>
             <div className="col col-9-md container">
               <section className="row mb-4">
