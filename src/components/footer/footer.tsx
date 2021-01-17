@@ -36,7 +36,7 @@ function LinkColumn({ links }) {
       {links.map((link) => {
         const url = link.label.replace(" ", "-").toLowerCase()
         return (
-          <a key={url} href={url} className="d-block mb-3">
+          <a key={url} href={url} className="text-dark d-block mb-3">
             {link.label}
           </a>
         )

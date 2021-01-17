@@ -4,6 +4,7 @@ import * as styles from "./header.module.scss"
 
 function Header() {
   const [hover, setHover] = useState(false)
+  const [isMenuOpen, setMenuOpen] = useState(false)
   return (
     <>
       <header className={`container mt-3`}>
@@ -11,10 +12,9 @@ function Header() {
           <div className="col col-xl">
             <div>Header Graphic</div>
           </div>
-          <div className={styles.headerLinks} role="menu">
+          <div className={styles.headerLinks}>
             <div
-              className="hoverWrapper mr-4"
-              role="button"
+              className="d-none d-lg-inline-block hoverWrapper mr-4"
               onMouseEnter={() => {
                 setHover(true)
               }}
@@ -22,15 +22,18 @@ function Header() {
                 setHover(false)
               }}
             >
-              <span>Hover Me</span>
+              <span className="text-dark">Hover Me</span>
             </div>
-            <a className="d-none d-lg-inline-block" href="/topic-one">
+            <a className="text-dark d-none d-lg-inline-block" href="/topic-one">
               Topic One
             </a>
-            <a className="d-none d-lg-inline-block" href="/topic-two">
+            <a className="text-dark d-none d-lg-inline-block" href="/topic-two">
               Topic Two
             </a>
-            <a className="d-none d-lg-inline-block" href="/topic-three">
+            <a
+              className="text-dark d-none d-lg-inline-block"
+              href="/topic-three"
+            >
               Topic Three
             </a>
             <a
@@ -40,6 +43,14 @@ function Header() {
               Call to Action
             </a>
           </div>
+          <button
+            className="btn btn-outline-dark d-lg-none"
+            onClick={() => {
+              setMenuOpen((v) => !v)
+            }}
+          >
+            Menu
+          </button>
         </div>
       </header>
       <div
@@ -55,30 +66,88 @@ function Header() {
       >
         <div className="row">
           <div className="col-auto">
-            <a className="d-block mb-3">Link One</a>
-            <a className="d-block mb-3">Link Two</a>
-            <a className="d-block mb-3">Link Three</a>
-            <a className="d-block mb-3">Link Four</a>
-            <a className="d-block mb-3">Link Five</a>
+            <a href="/404" className="d-block mb-3 text-dark">
+              Link One
+            </a>
+            <a href="/404" className="d-block mb-3 text-dark">
+              Link Two
+            </a>
+            <a href="/404" className="d-block mb-3 text-dark">
+              Link Three
+            </a>
+            <a href="/404" className="d-block mb-3 text-dark">
+              Link Four
+            </a>
+            <a href="/404" className="d-block mb-3 text-dark">
+              Link Five
+            </a>
           </div>
           <div className="col-auto">
-            <a className="d-block mb-3">Link One</a>
-            <a className="d-block mb-3">Link Two</a>
-            <a className="d-block mb-3">Link Three</a>
-            <a className="d-block mb-3">Link Four</a>
-            <a className="d-block mb-3">Link Five</a>
+            <a href="/404" className="d-block mb-3 text-dark">
+              Link One
+            </a>
+            <a href="/404" className="d-block mb-3 text-dark">
+              Link Two
+            </a>
+            <a href="/404" className="d-block mb-3 text-dark">
+              Link Three
+            </a>
+            <a href="/404" className="d-block mb-3 text-dark">
+              Link Four
+            </a>
+            <a href="/404" className="d-block mb-3 text-dark">
+              Link Five
+            </a>
           </div>
           <div className="col-auto">
-            <a className="d-block mb-3">Link One</a>
-            <a className="d-block mb-3">Link Two</a>
-            <a className="d-block mb-3">Link Three</a>
-            <a className="d-block mb-3">Link Four</a>
-            <a className="d-block mb-3">Link Five</a>
+            <a href="/404" className="d-block mb-3 text-dark">
+              Link One
+            </a>
+            <a href="/404" className="d-block mb-3 text-dark">
+              Link Two
+            </a>
+            <a href="/404" className="d-block mb-3 text-dark">
+              Link Three
+            </a>
+            <a href="/404" className="d-block mb-3 text-dark">
+              Link Four
+            </a>
+            <a href="/404" className="d-block mb-3 text-dark">
+              Link Five
+            </a>
           </div>
         </div>
         <div className="row">
           <div className="col-12">
-            <a className="btn btn-info btn-block">Menu Call To Action</a>
+            <a href="/call-to-action" className="btn btn-info btn-block">
+              Menu Call To Action
+            </a>
+          </div>
+        </div>
+      </div>
+      <div style={{ display: isMenuOpen ? "block" : "none" }}>
+        <div className="row">
+          <div>
+            <span>Click Me</span>
+          </div>
+          <a className="text-dark" href="/topic-one">
+            Topic One
+          </a>
+          <a className="text-dark" href="/topic-two">
+            Topic Two
+          </a>
+          <a className="text-dark" href="/topic-three">
+            Topic Three
+          </a>
+          <a className="btn btn-dark btn-block" href="/topic-four">
+            Call to Action
+          </a>
+        </div>
+        <div className="row">
+          <div className="col-12">
+            <a href="/call-to-action" className="btn btn-info btn-block">
+              Menu Call To Action
+            </a>
           </div>
         </div>
       </div>

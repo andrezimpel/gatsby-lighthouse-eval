@@ -7,8 +7,10 @@ import Header from "../components/header"
 import Footer from "../components/footer"
 import Video from "../components/video"
 import ImageBlock from "../components/image-block"
+import { getImage } from "gatsby-plugin-image"
 
 const IndexPage = ({ data }) => {
+  const imageData = getImage(data.file)
   return (
     <>
       <Helmet>
@@ -49,7 +51,7 @@ const IndexPage = ({ data }) => {
                     This site demonstrates the Gatsby setup required for optimal
                     Lighthouse scores.
                   </p>
-                  <p>
+                  <div>
                     <ul>
                       <li>
                         It uses Preact instead of React. This shaves 20% off the
@@ -85,7 +87,7 @@ const IndexPage = ({ data }) => {
                         until the element is 50% visible before loading.
                       </li>
                     </ul>
-                  </p>
+                  </div>
                 </div>
               </section>
               <section className="row mb-4">
@@ -94,8 +96,8 @@ const IndexPage = ({ data }) => {
                     This site demonstrates the Gatsby setup required for optimal
                     Lighthouse scores.
                   </p>
-                  <p>
-                    <h6>Todo List</h6>
+                  <div>
+                    <h2>Todo List</h2>
                     <ul>
                       <li>
                         Finish creating a representative Header component, with
@@ -110,14 +112,16 @@ const IndexPage = ({ data }) => {
                       <li>
                         Get the KaTex parsing the page after it has loaded.
                       </li>
-                      <li>Demonstrate a Next Gen Image as advert</li>
+                      <li>
+                        <del>Demonstrate a Next Gen Image as advert</del>
+                      </li>
                       <li>
                         Demonstrate a Next Gen Image as part of a content
                         section
                       </li>
                       <li>Pop site up on Netlify</li>
                     </ul>
-                  </p>
+                  </div>
                 </div>
               </section>
               <section className="row mb-4">
@@ -127,7 +131,7 @@ const IndexPage = ({ data }) => {
                 />
               </section>
               <section className="row mb-4">
-                <ImageBlock fixed={data.file.childImageSharp.fixed} />
+                <ImageBlock imageData={imageData} alt="Cute Dogs" />
               </section>
               <section className="row mb-4">
                 <Video
@@ -150,15 +154,7 @@ export const query = graphql`
   query {
     file(relativePath: { eq: "cute-dogs.png" }) {
       childImageSharp {
-        fixed(width: 800, height: 300) {
-          fallback: base64
-          width
-          height
-          src
-          srcSet
-          srcWebp
-          srcSetWebp
-        }
+        gatsbyImageData(layout: CONSTRAINED, width: 800, placeholder: NONE)
       }
     }
   }

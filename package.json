@@ -16,10 +16,10 @@
   },
   "license": "0BSD",
   "dependencies": {
-    "@wardpeet/gatsby-image-nextgen": "^0.0.2",
     "bootstrap": "^4.5.3",
     "dotenv": "^8.2.0",
     "gatsby": "^2.26.1",
+    "gatsby-plugin-image": "^0.5.1",
     "gatsby-plugin-preact": "^4.5.0",
     "gatsby-plugin-purgecss": "^5.0.0",
     "gatsby-plugin-react-helmet": "^3.6.0",
