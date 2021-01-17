@@ -1,12 +1,14 @@
 import React from "react"
+import { graphql } from "gatsby"
 import { Helmet } from "react-helmet"
 import "bootstrap/dist/css/bootstrap.min.css"
-//import "katex/dist/katex.min.css"
+import "katex/dist/katex.min.css"
 import Header from "../components/header"
 import Footer from "../components/footer"
 import Video from "../components/video"
+import ImageBlock from "../components/image-block"
 
-const IndexPage = () => {
+const IndexPage = ({ data }) => {
   return (
     <>
       <Helmet>
@@ -124,6 +126,15 @@ const IndexPage = () => {
                   containerClassName="col"
                 />
               </section>
+              <section className="row mb-4">
+                <ImageBlock fixed={data.file.childImageSharp.fixed} />
+              </section>
+              <section className="row mb-4">
+                <Video
+                  videoSrc="https://www.youtube.com/embed/8Ey30-sYvuU"
+                  containerClassName="col"
+                />
+              </section>
             </div>
           </div>
         </div>
@@ -134,3 +145,21 @@ const IndexPage = () => {
 }
 
 export default IndexPage
+
+export const query = graphql`
+  query {
+    file(relativePath: { eq: "cute-dogs.png" }) {
+      childImageSharp {
+        fixed(width: 800, height: 300) {
+          fallback: base64
+          width
+          height
+          src
+          srcSet
+          srcWebp
+          srcSetWebp
+        }
+      }
+    }
+  }
+`

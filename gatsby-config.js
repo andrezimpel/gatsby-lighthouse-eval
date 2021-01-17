@@ -20,6 +20,7 @@ module.exports = {
     "gatsby-plugin-sitemap",
     "gatsby-plugin-sharp",
     "gatsby-transformer-sharp",
+    "@wardpeet/gatsby-image-nextgen",
     {
       resolve: `gatsby-plugin-purgecss`,
       options: {
