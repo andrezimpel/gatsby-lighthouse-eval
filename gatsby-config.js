@@ -21,7 +21,6 @@ const plugins = [
     resolve: `gatsby-plugin-purgecss`,
     options: {
       printRejected: false,
-      ignore: ["katex/dist/katex.min.css"],
     },
   },
 ]
