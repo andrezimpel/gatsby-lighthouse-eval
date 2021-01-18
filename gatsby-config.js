@@ -26,8 +26,8 @@ const plugins = [
   },
 ]
 
-console.log(process.env.NODE_ENV)
-
+// I suspect the Preact plugin is causing issues with HMR during development
+// so only include if it's a production build
 if (process.env.NODE_ENV === "production") {
   plugins.push("gatsby-plugin-preact")
 }
