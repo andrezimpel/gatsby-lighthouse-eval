@@ -7,10 +7,11 @@ import Header from "../components/header"
 import Footer from "../components/footer"
 import Video from "../components/video"
 import ImageBlock from "../components/image-block"
-import { getImage } from "gatsby-plugin-image"
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
 const IndexPage = ({ data }) => {
-  const imageData = getImage(data.file)
+  const imageData = getImage(data.cuties)
+  const littlePic = getImage(data.box)
   return (
     <>
       <Helmet>
@@ -69,7 +70,7 @@ const IndexPage = ({ data }) => {
                         achieved with simple React JS and CSS. This reduces the
                         bundle size by ditching the Popper JS lib (around 80KB)
                       </li>
-                      <li>Gatsby Next Gen Image</li>
+                      <li>Gatsby Next Gen Image - "gatsby-plugin-image"</li>
                       <li>
                         Inline SVG components instead of the FontAwesome
                         library.
@@ -119,7 +120,9 @@ const IndexPage = ({ data }) => {
                         Demonstrate a Next Gen Image as part of a content
                         section
                       </li>
-                      <li>Pop site up on Netlify</li>
+                      <li>
+                        <del>Pop site up on Netlify</del>
+                      </li>
                     </ul>
                   </div>
                 </div>
@@ -139,6 +142,86 @@ const IndexPage = ({ data }) => {
                   containerClassName="col"
                 />
               </section>
+              <section className="row mb-4">
+                <div className="col-12 col-md-6">
+                  <p>
+                    Contrary to popular belief, Lorem Ipsum is not simply random
+                    text. It has roots in a piece of classical Latin literature
+                    from 45 BC, making it over 2000 years old. Richard
+                    McClintock, a Latin professor at Hampden-Sydney College in
+                    Virginia, looked up one of the more obscure Latin words,
+                    consectetur, from a Lorem Ipsum passage, and going through
+                    the cites of the word in classical literature, discovered
+                    the undoubtable source.{" "}
+                  </p>
+                  <p>
+                    Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de
+                    Finibus Bonorum et Malorum" (The Extremes of Good and Evil)
+                    by Cicero, written in 45 BC. This book is a treatise on the
+                    theory of ethics, very popular during the Renaissance. The
+                    first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..",
+                    comes from a line in section 1.10.32.
+                  </p>
+                </div>
+                <div className="col-12 col-md-6">
+                  <GatsbyImage image={littlePic} alt="Little Pic" />
+                </div>
+              </section>
+              <section className="row mb-4">
+                <div className="col-12 col-md-6">
+                  <GatsbyImage image={littlePic} alt="Little Pic" />
+                </div>
+                <div className="col-12 col-md-6">
+                  <p>
+                    Contrary to popular belief, Lorem Ipsum is not simply random
+                    text. It has roots in a piece of classical Latin literature
+                    from 45 BC, making it over 2000 years old. Richard
+                    McClintock, a Latin professor at Hampden-Sydney College in
+                    Virginia, looked up one of the more obscure Latin words,
+                    consectetur, from a Lorem Ipsum passage, and going through
+                    the cites of the word in classical literature, discovered
+                    the undoubtable source.{" "}
+                  </p>
+                  <p>
+                    Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de
+                    Finibus Bonorum et Malorum" (The Extremes of Good and Evil)
+                    by Cicero, written in 45 BC. This book is a treatise on the
+                    theory of ethics, very popular during the Renaissance. The
+                    first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..",
+                    comes from a line in section 1.10.32.
+                  </p>
+                </div>
+              </section>
+              <section className="row mb-4">
+                <div className="col-12 card shadow highlight-info">
+                  <div className="card-body row">
+                    <span className="h1 col-8">Important Link Information</span>
+                    <button className="col-4 btn btn-large btn-danger">
+                      Don't Click Me
+                    </button>
+                  </div>
+                </div>
+              </section>
+              <section className="row mb-4">
+                <div className="col-12 card shadow highlight-info">
+                  <div className="card-body row">
+                    <span className="h1 col-8">Important Link Information</span>
+                    <button className="col-4 btn btn-large btn-danger">
+                      Don't Click Me
+                    </button>
+                  </div>
+                </div>
+              </section>
+              <section className="row mb-4">
+                <div className="col-12 card shadow highlight-info">
+                  <div className="card-body row">
+                    <span className="h1 col-8">Important Link Information</span>
+                    <button className="col-4 btn btn-large btn-danger">
+                      Don't Click Me
+                    </button>
+                  </div>
+                </div>
+              </section>
             </div>
           </div>
         </div>
@@ -152,9 +235,20 @@ export default IndexPage
 
 export const query = graphql`
   query {
-    file(relativePath: { eq: "cute-dogs.png" }) {
+    cuties: file(relativePath: { eq: "cute-dogs.png" }) {
       childImageSharp {
-        gatsbyImageData(layout: CONSTRAINED, width: 800, placeholder: NONE)
+        gatsbyImageData(layout: CONSTRAINED, placeholder: NONE)
+      }
+    }
+
+    box: file(relativePath: { eq: "cute-dogs.png" }) {
+      childImageSharp {
+        gatsbyImageData(
+          layout: FIXED
+          width: 300
+          height: 300
+          placeholder: NONE
+        )
       }
     }
   }
