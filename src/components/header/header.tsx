@@ -1,5 +1,6 @@
 import * as React from "react"
 import { useState } from "react"
+import Dropdown from "../dropdown"
 import * as styles from "./header.module.scss"
 
 function Header() {
@@ -8,6 +9,13 @@ function Header() {
   return (
     <>
       <header className={`container mt-3`}>
+        <div className="row">
+          <div className="col">
+            <Dropdown>
+              <span>Hi there fam!</span>
+            </Dropdown>
+          </div>
+        </div>
         <div className="row align-items-center">
           <div className="col col-xl">
             <div>Header Graphic</div>
