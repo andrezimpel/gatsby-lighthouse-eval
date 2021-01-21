@@ -1,6 +1,6 @@
 import * as React from "react"
 import { Helmet } from "react-helmet"
-import "bootstrap/dist/css/bootstrap.min.css"
+//import "bootstrap/dist/css/bootstrap.min.css"
 
 const IndexPage = () => {
   return (
