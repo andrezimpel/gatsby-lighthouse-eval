@@ -1,7 +1,10 @@
 import * as React from "react"
 import { useState } from "react"
 import Dropdown from "../dropdown"
+import BootstrapLogo from "./bootstrap-logo"
+import GatsbyLogo from "./gatsby-logo"
 import * as styles from "./header.module.scss"
+import PreactLogo from "./preact-logo"
 
 function Header() {
   const [hover, setHover] = useState(false)
@@ -11,6 +14,11 @@ function Header() {
       <header className={`container bg-dark text-white`}>
         <div className="row">
           <div className="col">
+            <span className="py-2">
+              Google released{" "}
+              <span className="badge badge-info">Lighthouse 6.0</span> in May
+              2020 and it immediately introduced breaking changes. Semver, huh.
+            </span>
             <Dropdown>
               <ul>
                 <li>
@@ -31,7 +39,11 @@ function Header() {
         </div>
         <div className="row align-items-center">
           <div className="col col-xl">
-            <div>Header Graphic</div>
+            <div className="py-3">
+              <GatsbyLogo />
+              <BootstrapLogo className="m-2" />
+              <PreactLogo />
+            </div>
           </div>
           <div className={`${styles.headerLinks} mb-3`}>
             <div
