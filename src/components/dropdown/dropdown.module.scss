@@ -1,0 +1,25 @@
+.container {
+  position: relative;
+}
+
+.wrapper {
+  position: relative;
+}
+
+.dropdown {
+  z-index: 9999;
+  background: #fff;
+  position: absolute;
+  width: 300px;
+  top: 36px;
+  visibility: hidden;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.4s ease, transform 0.4s ease, visibility 0.4s;
+}
+
+.expanded {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}

@@ -8,11 +8,24 @@ function Header() {
   const [isMenuOpen, setMenuOpen] = useState(false)
   return (
     <>
-      <header className={`container mt-3`}>
+      <header className={`container bg-dark text-white`}>
         <div className="row">
           <div className="col">
             <Dropdown>
-              <span>Hi there fam!</span>
+              <ul>
+                <li>
+                  <span className="text-dark">Hi there fam!</span>
+                </li>
+                <li>
+                  <span className="text-dark">Hi there fam!</span>
+                </li>
+                <li>
+                  <span className="text-dark">Hi there fam!</span>
+                </li>
+                <li>
+                  <span className="text-dark">Hi there fam!</span>
+                </li>
+              </ul>
             </Dropdown>
           </div>
         </div>
@@ -20,7 +33,7 @@ function Header() {
           <div className="col col-xl">
             <div>Header Graphic</div>
           </div>
-          <div className={styles.headerLinks}>
+          <div className={`${styles.headerLinks} mb-3`}>
             <div
               className="d-none d-lg-inline-block hoverWrapper mr-4"
               onMouseEnter={() => {
@@ -30,22 +43,28 @@ function Header() {
                 setHover(false)
               }}
             >
-              <span className="text-dark">Hover Me</span>
+              <span>Hover Me</span>
             </div>
-            <a className="text-dark d-none d-lg-inline-block" href="/topic-one">
+            <a
+              className="text-white d-none d-lg-inline-block"
+              href="/topic-one"
+            >
               Topic One
             </a>
-            <a className="text-dark d-none d-lg-inline-block" href="/topic-two">
+            <a
+              className="text-white d-none d-lg-inline-block"
+              href="/topic-two"
+            >
               Topic Two
             </a>
             <a
-              className="text-dark d-none d-lg-inline-block"
+              className="text-white d-none d-lg-inline-block"
               href="/topic-three"
             >
               Topic Three
             </a>
             <a
-              className="btn btn-dark d-none d-lg-inline-block"
+              className="btn btn-info d-none d-lg-inline-block"
               href="/topic-four"
             >
               Call to Action

@@ -3,11 +3,16 @@
 @import "../../node_modules/bootstrap/scss/mixins";
 
 $theme-colors: (
-  "primary": #0074d9,
-  "danger": #ff4136,
-  "dark": #361a18,
-  "info": #4244ca,
+  "primary": #461a55,
+  "danger": #991a2d,
+  "dark": #201535,
+  "info": #63429b,
 );
+
+$font-family-sans-serif: "proxima-nova", -apple-system, BlinkMacSystemFont,
+  "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans",
+  sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
+  "Noto Color Emoji";
 
 @import "../../node_modules/bootstrap/scss/root";
 @import "../../node_modules/bootstrap/scss/grid";
@@ -18,3 +23,4 @@ $theme-colors: (
 @import "../../node_modules/bootstrap/scss/badge";
 @import "../../node_modules/bootstrap/scss/card";
 @import "../../node_modules/bootstrap/scss/utilities";
+@import "typekit";

@@ -1,15 +1,12 @@
 import React from "react"
 import { graphql } from "gatsby"
 import { Helmet } from "react-helmet"
-//import "bootstrap/dist/css/bootstrap.min.css"
 import "../styles/custom-bootstrap.scss"
 import Header from "../components/header"
 import Footer from "../components/footer"
 import Video from "../components/video"
 import ImageBlock from "../components/image-block"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faCoffee } from "@fortawesome/free-solid-svg-icons"
 
 const IndexPage = ({ data }) => {
   const imageData = getImage(data.cuties)
@@ -18,14 +15,16 @@ const IndexPage = ({ data }) => {
     <>
       <Helmet>
         <html lang="en" />
-        <title>Gatsby | Test Page</title>
+        <title>Gatsby Speed Test | Test Page</title>
         <meta
           name="description"
           content="Evaluation of Gatsby Lighthouse Scores"
         />
       </Helmet>
-      <Header />
-      <main>
+      <div className="w-100 bg-dark">
+        <Header />
+      </div>
+      <main className="tk-proxima-nova">
         <div className="container">
           <div className="row">
             <div className="col col-12 my-5">
@@ -53,7 +52,6 @@ const IndexPage = ({ data }) => {
                   <p className="lead">
                     This site demonstrates the Gatsby setup required for optimal
                     Lighthouse scores.
-                    <FontAwesomeIcon icon={faCoffee} size="2x" />
                   </p>
                   <div>
                     <ul>
