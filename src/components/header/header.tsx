@@ -8,18 +8,18 @@ import PreactLogo from "./preact-logo"
 
 const optionsDropdown = (
   <Dropdown label="Options">
-    <ul>
-      <li>
-        <span className="text-dark">Hi there fam!</span>
+    <ul className="list-group">
+      <li className="list-group-item">
+        <span className="text-dark">Option One</span>
       </li>
-      <li>
-        <span className="text-dark">Hi there fam!</span>
+      <li className="list-group-item">
+        <span className="text-dark">Option Two</span>
       </li>
-      <li>
-        <span className="text-dark">Hi there fam!</span>
+      <li className="list-group-item">
+        <span className="text-dark">Option Three</span>
       </li>
-      <li>
-        <span className="text-dark">Hi there fam!</span>
+      <li className="list-group-item">
+        <span className="text-dark">Option Four</span>
       </li>
     </ul>
   </Dropdown>
@@ -27,18 +27,18 @@ const optionsDropdown = (
 
 const moreOptionsDropdown = (
   <Dropdown label="More Options">
-    <ul>
-      <li>
-        <span className="text-dark">Hi there fam!</span>
+    <ul className="list-group">
+      <li className="list-group-item">
+        <span className="text-dark">Option One</span>
       </li>
-      <li>
-        <span className="text-dark">Hi there fam!</span>
+      <li className="list-group-item">
+        <span className="text-dark">Option Two</span>
       </li>
-      <li>
-        <span className="text-dark">Hi there fam!</span>
+      <li className="list-group-item">
+        <span className="text-dark">Option Three</span>
       </li>
-      <li>
-        <span className="text-dark">Hi there fam!</span>
+      <li className="list-group-item">
+        <span className="text-dark">Option Four</span>
       </li>
     </ul>
   </Dropdown>
@@ -53,6 +53,9 @@ function Header() {
         <div className="row d-none d-lg-block">
           <div className="col">
             <span className="py-2">
+              <span className="badge badge-highlight badge-pill mr-2">
+                Hey!
+              </span>
               Google released{" "}
               <span className="badge badge-info">Lighthouse 6.0</span> in May
               2020 and it immediately introduced breaking changes. Semver, huh.
