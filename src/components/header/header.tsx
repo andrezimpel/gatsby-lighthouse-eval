@@ -12,7 +12,7 @@ function Header() {
   return (
     <>
       <header className={`container bg-dark text-white`}>
-        <div className="row">
+        <div className="row d-none d-lg-block">
           <div className="col">
             <span className="py-2">
               Google released{" "}
@@ -83,7 +83,7 @@ function Header() {
             </a>
           </div>
           <button
-            className="btn btn-outline-dark d-lg-none"
+            className="btn btn-outline-info text-white d-lg-none"
             onClick={() => {
               setMenuOpen((v) => !v)
             }}
