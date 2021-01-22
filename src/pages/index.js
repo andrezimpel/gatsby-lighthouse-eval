@@ -25,17 +25,21 @@ const IndexPage = ({ data }) => {
         <Header />
       </div>
       <main className="tk-proxima-nova">
-        <div className="container">
-          <div className="row">
-            <div className="col col-12 my-5">
-              <h1>
-                Gatsby/Preact &amp; Bootstrap Speed Test{" "}
-                <span role="img" aria-label="Fire Emoji">
-                  🔥
-                </span>
-              </h1>
+        <div className="w-100 bg-dark">
+          <div className="container">
+            <div className="row">
+              <div className="col-12 my-5">
+                <h1 className="text-highlight font-weight-bold text-uppercase text-spacing-1">
+                  Gatsby + Bootstrap + Preact Speed Test{" "}
+                  <span role="img" aria-label="Fire Emoji">
+                    🔥
+                  </span>
+                </h1>
+              </div>
             </div>
           </div>
+        </div>
+        <div className="container mt-5">
           <div className="row">
             <div className="col col-3 d-none d-md-block">
               <ul className="list-group">

@@ -7,6 +7,7 @@ $theme-colors: (
   "danger": #991a2d,
   "dark": #201535,
   "info": #63429b,
+  "highlight": #f219aa,
 );
 
 $font-family-sans-serif: "proxima-nova", -apple-system, BlinkMacSystemFont,
@@ -24,3 +25,7 @@ $font-family-sans-serif: "proxima-nova", -apple-system, BlinkMacSystemFont,
 @import "../../node_modules/bootstrap/scss/card";
 @import "../../node_modules/bootstrap/scss/utilities";
 @import "typekit";
+
+.text-spacing-1 {
+  letter-spacing: 1px;
+}

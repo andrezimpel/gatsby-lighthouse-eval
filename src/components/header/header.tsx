@@ -6,6 +6,44 @@ import GatsbyLogo from "./gatsby-logo"
 import * as styles from "./header.module.scss"
 import PreactLogo from "./preact-logo"
 
+const optionsDropdown = (
+  <Dropdown label="Options">
+    <ul>
+      <li>
+        <span className="text-dark">Hi there fam!</span>
+      </li>
+      <li>
+        <span className="text-dark">Hi there fam!</span>
+      </li>
+      <li>
+        <span className="text-dark">Hi there fam!</span>
+      </li>
+      <li>
+        <span className="text-dark">Hi there fam!</span>
+      </li>
+    </ul>
+  </Dropdown>
+)
+
+const moreOptionsDropdown = (
+  <Dropdown label="More Options">
+    <ul>
+      <li>
+        <span className="text-dark">Hi there fam!</span>
+      </li>
+      <li>
+        <span className="text-dark">Hi there fam!</span>
+      </li>
+      <li>
+        <span className="text-dark">Hi there fam!</span>
+      </li>
+      <li>
+        <span className="text-dark">Hi there fam!</span>
+      </li>
+    </ul>
+  </Dropdown>
+)
+
 function Header() {
   const [hover, setHover] = useState(false)
   const [isMenuOpen, setMenuOpen] = useState(false)
@@ -19,22 +57,8 @@ function Header() {
               <span className="badge badge-info">Lighthouse 6.0</span> in May
               2020 and it immediately introduced breaking changes. Semver, huh.
             </span>
-            <Dropdown>
-              <ul>
-                <li>
-                  <span className="text-dark">Hi there fam!</span>
-                </li>
-                <li>
-                  <span className="text-dark">Hi there fam!</span>
-                </li>
-                <li>
-                  <span className="text-dark">Hi there fam!</span>
-                </li>
-                <li>
-                  <span className="text-dark">Hi there fam!</span>
-                </li>
-              </ul>
-            </Dropdown>
+            {optionsDropdown}
+            {moreOptionsDropdown}
           </div>
         </div>
         <div className="row align-items-center">
@@ -57,28 +81,16 @@ function Header() {
             >
               <span>Hover Me</span>
             </div>
-            <a
-              className="text-white d-none d-lg-inline-block"
-              href="/topic-one"
-            >
+            <a className="text-white d-none d-lg-inline-block" href="/404">
               Topic One
             </a>
-            <a
-              className="text-white d-none d-lg-inline-block"
-              href="/topic-two"
-            >
+            <a className="text-white d-none d-lg-inline-block" href="/404">
               Topic Two
             </a>
-            <a
-              className="text-white d-none d-lg-inline-block"
-              href="/topic-three"
-            >
+            <a className="text-white d-none d-lg-inline-block" href="/404">
               Topic Three
             </a>
-            <a
-              className="btn btn-info d-none d-lg-inline-block"
-              href="/topic-four"
-            >
+            <a className="btn btn-info d-none d-lg-inline-block" href="/404">
               Call to Action
             </a>
           </div>
@@ -164,23 +176,18 @@ function Header() {
           </div>
         </div>
       </div>
-      <div style={{ display: isMenuOpen ? "block" : "none" }}>
+      <div
+        style={{ display: isMenuOpen ? "block" : "none" }}
+        className="d-lg-none"
+      >
         <div className="row">
-          <div>
-            <span>Click Me</span>
+          <div className="col-12">
+            {optionsDropdown}
+            {moreOptionsDropdown}
+            <a className="btn btn-dark btn-block" href="/topic-four">
+              Call to Action
+            </a>
           </div>
-          <a className="text-dark" href="/topic-one">
-            Topic One
-          </a>
-          <a className="text-dark" href="/topic-two">
-            Topic Two
-          </a>
-          <a className="text-dark" href="/topic-three">
-            Topic Three
-          </a>
-          <a className="btn btn-dark btn-block" href="/topic-four">
-            Call to Action
-          </a>
         </div>
         <div className="row">
           <div className="col-12">
