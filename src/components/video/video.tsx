@@ -1,17 +1,17 @@
 import * as React from "react"
 import { useInView } from "react-intersection-observer"
+import * as styles from "./video.module.scss"
 
-const Video = ({ videoSrc, containerClassName = "" }) => {
+const Video = ({ videoSrc, title = "YouTube Video" }) => {
   const { ref, inView } = useInView({
     triggerOnce: true,
     threshold: 0.5,
   })
   return (
-    <div ref={ref} className={containerClassName}>
+    <div ref={ref} className={styles.container}>
       {inView && (
         <iframe
-          title="YouTube Video"
-          className="w-100 h-100"
+          title={title}
           src={videoSrc}
           frameBorder="0"
           allowFullScreen={true}

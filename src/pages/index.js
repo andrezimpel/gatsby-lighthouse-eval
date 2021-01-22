@@ -133,19 +133,25 @@ const IndexPage = ({ data }) => {
                 </div>
               </section>
               <section className="row mb-4">
-                <Video
-                  videoSrc="https://www.youtube.com/embed/8Ey30-sYvuU"
-                  containerClassName="col"
-                />
+                <div className="col">
+                  <Video
+                    videoSrc="https://www.youtube.com/embed/8Ey30-sYvuU"
+                    containerClassName="col"
+                  />
+                </div>
               </section>
               <section className="row mb-4">
-                <ImageBlock imageData={imageData} alt="Cute Dogs" />
+                <div className="col">
+                  <ImageBlock imageData={imageData} alt="Cute Dogs" />
+                </div>
               </section>
               <section className="row mb-4">
-                <Video
-                  videoSrc="https://www.youtube.com/embed/8Ey30-sYvuU"
-                  containerClassName="col"
-                />
+                <div className="col">
+                  <Video
+                    videoSrc="https://www.youtube.com/embed/8Ey30-sYvuU"
+                    containerClassName="col"
+                  />
+                </div>
               </section>
               <section className="row mb-4">
                 <div className="col-12 col-md-6">
