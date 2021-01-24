@@ -20,8 +20,8 @@ function Footer() {
   ]
   return (
     <footer className="container text-white py-4">
-      <div className="row">
-        <div className="col col-lg-3">Social Links</div>
+      <div className="row text-center text-lg-left">
+        <div className="col-6 col-lg-3">Social Links</div>
         <LinkColumn title="Column One" links={linkGroup} />
         <LinkColumn title="Column Two" links={linkGroup} />
         <LinkColumn title="Column Three" links={linkGroup} />
@@ -32,7 +32,7 @@ function Footer() {
 
 function LinkColumn({ title, links }) {
   return (
-    <div className="col col-lg-3">
+    <div className="col-6 col-lg-3">
       <span className="h6 text-uppercase d-block mb-3">{title}</span>
       {links.map((link) => {
         const url = "/404"
