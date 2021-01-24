@@ -237,7 +237,9 @@ const IndexPage = ({ data }) => {
           </div>
         </div>
       </main>
-      <Footer />
+      <div className="w-100 bg-dark">
+        <Footer />
+      </div>
     </>
   )
 }

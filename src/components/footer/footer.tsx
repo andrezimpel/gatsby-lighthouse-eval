@@ -19,24 +19,25 @@ function Footer() {
     },
   ]
   return (
-    <footer className="container">
+    <footer className="container text-white py-4">
       <div className="row">
-        <div className="col col-3">Social Links</div>
-        <LinkColumn links={linkGroup} />
-        <LinkColumn links={linkGroup} />
-        <LinkColumn links={linkGroup} />
+        <div className="col col-lg-3">Social Links</div>
+        <LinkColumn title="Column One" links={linkGroup} />
+        <LinkColumn title="Column Two" links={linkGroup} />
+        <LinkColumn title="Column Three" links={linkGroup} />
       </div>
     </footer>
   )
 }
 
-function LinkColumn({ links }) {
+function LinkColumn({ title, links }) {
   return (
-    <div className="col-12 col-lg-auto">
+    <div className="col col-lg-3">
+      <span className="h6 text-uppercase d-block mb-3">{title}</span>
       {links.map((link) => {
-        const url = link.label.replace(" ", "-").toLowerCase()
+        const url = "/404"
         return (
-          <a key={url} href={url} className="text-dark d-block mb-3">
+          <a key={url} href={url} className="text-info d-block mb-3">
             {link.label}
           </a>
         )
