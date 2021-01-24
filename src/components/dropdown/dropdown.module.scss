@@ -1,6 +1,6 @@
 .container {
   position: relative;
-  display: inline-block;
+  width: 100%;
 }
 
 .content {
@@ -12,6 +12,11 @@
 }
 
 @media (min-width: 992px) {
+  .container {
+    display: inline-block;
+    width: auto;
+  }
+
   .content {
     position: absolute;
     top: 36px;
