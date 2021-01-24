@@ -201,6 +201,8 @@ const IndexPage = ({ data }) => {
                     first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..",
                     comes from a line in section 1.10.32.
                   </p>
+                  <p className="katex">f(a,b,c) = (a^2+b^2+c^2)^3</p>
+                  <p>Dogs</p>
                 </div>
               </section>
               <section className="row mb-4">

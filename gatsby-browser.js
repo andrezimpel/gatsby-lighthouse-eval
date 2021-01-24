@@ -33,11 +33,25 @@ function initGTM() {
 
   katexScript.type = "text/javascript"
   katexScript.async = true
-  katexScript.src = `https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/contrib/auto-render.min.js`
+  //katexScript.src = `https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/contrib/auto-render.min.js`
+  katexScript.src = `https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.js`
+
+  /**katexScript.onload = function () {
+    const renderMathInElement = window.renderMathInElement
+    const katexNodes = document.querySelectorAll(".katex")
+    katexNodes.forEach(function (element) {
+      console.log(element.innerText)
+      renderMathInElement(element)
+    })
+  }**/
 
   katexScript.onload = function () {
-    const renderMathInElement = window.renderMathInElement
-    renderMathInElement(document.body)
+    const katex = window.katex
+    const katexNodes = document.querySelectorAll(".katex")
+    katexNodes.forEach(function (element) {
+      const encoded = element.innerText
+      katex.render(encoded, element)
+    })
   }
 
   document.head.appendChild(katexScript)
