@@ -21,6 +21,7 @@ const plugins = [
     resolve: `gatsby-plugin-purgecss`,
     options: {
       printRejected: false,
+      whitelist: ["katex-html"],
     },
   },
 ]
