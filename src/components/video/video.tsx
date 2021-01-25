@@ -16,7 +16,8 @@ const Video = ({ videoSrc, title = "YouTube Video" }) => {
           frameBorder="0"
           allowFullScreen={true}
           width="100%"
-          height="450"
+          height="100%"
+          style={{ maxHeight: "500px" }}
         />
       )}
     </div>
