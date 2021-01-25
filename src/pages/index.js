@@ -214,6 +214,17 @@ const IndexPage = ({ data }) => {
                 </div>
               </section>
               <section className="row mb-4">
+                <div className="col-12">
+                  <Accordion title="Test Accordion">
+                    <p>Accordion content goes here</p>
+                    <p>Whatever you like that's valid JSX</p>
+                    <div>
+                      <p>Could be a div with html passed in too</p>
+                    </div>
+                  </Accordion>
+                </div>
+              </section>
+              <section className="row mb-4">
                 <div className="col-12 card shadow highlight-info">
                   <div className="card-body row">
                     <span className="h1 col-8">Gatsby Information</span>

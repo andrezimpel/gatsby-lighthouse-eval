@@ -5,15 +5,15 @@ function Accordion({ title, children }) {
   const [isExpanded, setExpanded] = React.useState(false)
   const [contentHeight, setContentHeight] = React.useState("0px")
   const content = React.useRef(null)
+  React.useEffect(() => {
+    setContentHeight(isExpanded ? `${content.current.scrollHeight}px` : "0px")
+  }, [isExpanded, setContentHeight])
   return (
     <div className={`${styles.accordion}${isExpanded ? " active" : ""}`}>
       <button
         className={styles.button}
         onClick={() => {
           setExpanded((v) => !v)
-          setContentHeight(
-            isExpanded ? `${content.current.scrollHeight}px` : "0px"
-          )
         }}
       >
         {title}
