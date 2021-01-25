@@ -9,8 +9,9 @@ import ImageBlock from "../components/image-block"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
 const IndexPage = ({ data }) => {
-  const imageData = getImage(data.cuties)
+  const imageData = getImage(data.mountain)
   const littlePic = getImage(data.box)
+  const neon = getImage(data.window)
   return (
     <>
       <Helmet>
@@ -142,7 +143,7 @@ const IndexPage = ({ data }) => {
               </section>
               <section className="row mb-4">
                 <div className="col">
-                  <ImageBlock imageData={imageData} alt="Cute Dogs" />
+                  <ImageBlock imageData={imageData} alt="Mountains" />
                 </div>
               </section>
               <section className="row mb-4">
@@ -174,13 +175,13 @@ const IndexPage = ({ data }) => {
                     comes from a line in section 1.10.32.
                   </p>
                 </div>
-                <div className="col-12 col-md-6">
-                  <GatsbyImage image={littlePic} alt="Little Pic" />
+                <div className="col-12 col-md-6 d-flex justify-content-center align-items-center">
+                  <GatsbyImage image={littlePic} alt="Bird" />
                 </div>
               </section>
               <section className="row mb-4">
-                <div className="col-12 col-md-6">
-                  <GatsbyImage image={littlePic} alt="Little Pic" />
+                <div className="col-12 col-md-6 d-flex justify-content-center align-items-center">
+                  <GatsbyImage image={neon} alt="Window" />
                 </div>
                 <div className="col-12 col-md-6">
                   <p>
@@ -256,12 +257,33 @@ export const query = graphql`
       }
     }
 
-    box: file(relativePath: { eq: "cute-dogs.png" }) {
+    mountain: file(
+      relativePath: { eq: "kai-oberhauser-BKAaLmT0tIs-unsplash.jpg" }
+    ) {
+      childImageSharp {
+        gatsbyImageData(layout: CONSTRAINED, placeholder: NONE)
+      }
+    }
+
+    box: file(relativePath: { eq: "tony-reid-9lOZJxYbuog-unsplash.jpg" }) {
       childImageSharp {
         gatsbyImageData(
           layout: FIXED
           width: 300
           height: 300
+          placeholder: NONE
+        )
+      }
+    }
+
+    window: file(
+      relativePath: { eq: "krzysztof-hepner-9VQLjXX0BZg-unsplash.jpg" }
+    ) {
+      childImageSharp {
+        gatsbyImageData(
+          layout: FIXED
+          width: 300
+          height: 400
           placeholder: NONE
         )
       }
