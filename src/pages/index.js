@@ -6,6 +6,7 @@ import Header from "../components/header"
 import Footer from "../components/footer"
 import Video from "../components/video"
 import ImageBlock from "../components/image-block"
+import Accordion from "../components/accordion"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
 const IndexPage = ({ data }) => {
@@ -240,6 +241,17 @@ const IndexPage = ({ data }) => {
                       Don't Click Me
                     </button>
                   </div>
+                </div>
+              </section>
+              <section className="row mb-4">
+                <div className="col-12">
+                  <Accordion title="Test Accordion">
+                    <p>Accordion content goes here</p>
+                    <p>Whatever you like that's valid JSX</p>
+                    <div>
+                      <p>Could be a div with html passed in too</p>
+                    </div>
+                  </Accordion>
                 </div>
               </section>
             </div>
