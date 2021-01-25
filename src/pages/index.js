@@ -215,7 +215,7 @@ const IndexPage = ({ data }) => {
               <section className="row mb-4">
                 <div className="col-12 card shadow highlight-info">
                   <div className="card-body row">
-                    <span className="h1 col-8">Important Link Information</span>
+                    <span className="h1 col-8">Gatsby Information</span>
                     <button className="col-4 btn btn-large btn-info">
                       Don't Click Me
                     </button>
@@ -225,7 +225,7 @@ const IndexPage = ({ data }) => {
               <section className="row mb-4">
                 <div className="col-12 card shadow highlight-info">
                   <div className="card-body row">
-                    <span className="h1 col-8">Important Link Information</span>
+                    <span className="h1 col-8">Bootstrap Information</span>
                     <button className="col-4 btn btn-large btn-info">
                       Don't Click Me
                     </button>
@@ -235,7 +235,7 @@ const IndexPage = ({ data }) => {
               <section className="row mb-4">
                 <div className="col-12 card shadow highlight-info">
                   <div className="card-body row">
-                    <span className="h1 col-8">Important Link Information</span>
+                    <span className="h1 col-8">Preact Information</span>
                     <button className="col-4 btn btn-large btn-info">
                       Don't Click Me
                     </button>
