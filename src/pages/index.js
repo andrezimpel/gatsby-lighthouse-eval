@@ -107,8 +107,10 @@ const IndexPage = ({ data }) => {
                     <h2>Todo List</h2>
                     <ul>
                       <li>
-                        Finish creating a representative Header component, with
-                        more links and a mobile version.
+                        <del>
+                          Finish creating a representative Header component,
+                          with more links and a mobile version.
+                        </del>
                       </li>
                       <li>
                         <del>Video Component</del>
@@ -117,13 +119,17 @@ const IndexPage = ({ data }) => {
                         <del>Use an actual GTM ID</del>
                       </li>
                       <li>
-                        Get the KaTex parsing the page after it has loaded.
+                        <del>
+                          Get the KaTex parsing the page after it has loaded.
+                        </del>
                       </li>
                       <li>
                         <del>Demonstrate a Next Gen Image as advert</del>
                       </li>
                       <li>
-                        Demonstrate a Next Gen Image as part of a content
+                        <del>
+                          Demonstrate a Next Gen Image as part of a content
+                        </del>
                         section
                       </li>
                       <li>
