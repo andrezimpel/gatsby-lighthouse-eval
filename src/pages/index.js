@@ -2,6 +2,7 @@ import React from "react"
 import { graphql } from "gatsby"
 import { Helmet } from "react-helmet"
 import "../styles/custom-bootstrap.scss"
+import * as styles from "../styles/index-page.module.scss"
 import Header from "../components/header"
 import Footer from "../components/footer"
 import Video from "../components/video"
@@ -44,7 +45,7 @@ const IndexPage = ({ data }) => {
         <div className="container mt-5">
           <div className="row">
             <div className="col col-3 d-none d-md-block">
-              <ul className="list-group">
+              <ul className={`list-group ${styles.stickyNav}`}>
                 <li className="list-group-item">Nav Option One</li>
                 <li className="list-group-item">Nav Option Two</li>
                 <li className="list-group-item">Nav Option Three</li>
