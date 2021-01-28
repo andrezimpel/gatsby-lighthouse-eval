@@ -45,11 +45,13 @@ function Dropdown({ label, children }) {
         {label}
         <Arrow />
       </button>
+
       <div
         className={`${styles.content}${
           isExpanded ? ` ${styles.expanded}` : ""
         }`}
       >
+        <div className={`${styles.triangle}`}></div>
         {children}
       </div>
     </div>
