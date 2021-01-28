@@ -34,20 +34,20 @@
     visibility: visible;
     transform: translateY(0);
   }
+
+  .triangle {
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-bottom: 5px solid white;
+    position: absolute;
+    top: -5px;
+    left: 25%;
+  }
 }
 
 .expanded {
   opacity: 1;
   display: block;
-}
-
-.triangle {
-  width: 0;
-  height: 0;
-  border-left: 5px solid transparent;
-  border-right: 5px solid transparent;
-  border-bottom: 5px solid white;
-  position: absolute;
-  top: -5px;
-  left: 25%;
 }
