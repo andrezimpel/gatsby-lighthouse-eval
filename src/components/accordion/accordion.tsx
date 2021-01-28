@@ -1,7 +1,12 @@
 import * as React from "react"
 import * as styles from "./accordion.module.scss"
 
-function Accordion({ title, children }) {
+type AccordionProps = {
+  title: string
+  children: React.ReactNode
+}
+
+function Accordion({ title, children }: AccordionProps) {
   const [isExpanded, setExpanded] = React.useState(false)
   const [contentHeight, setContentHeight] = React.useState("0px")
   const content = React.useRef(null)
