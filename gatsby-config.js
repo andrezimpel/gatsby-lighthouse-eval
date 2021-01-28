@@ -17,6 +17,7 @@ const plugins = [
   "gatsby-plugin-sharp",
   "gatsby-transformer-sharp",
   "gatsby-plugin-image",
+  "gatsby-plugin-loadable-components-ssr",
   {
     resolve: `gatsby-plugin-purgecss`,
     options: {
