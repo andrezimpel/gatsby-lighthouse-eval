@@ -6,7 +6,7 @@ const getRenderedContent = (customBlockName) => {
   const element = window.document.querySelector(
     `#CustomBlock__${customBlockName}`
   )
-  return element ? `` : ""
+  return element ? element.innerHTML : ""
 }
 const CustomBlock = ({ customBlock }) => {
   const CustomBlockComponent = CUSTOM_BLOCKS[customBlock.name]
