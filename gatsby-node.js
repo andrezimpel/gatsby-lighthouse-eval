@@ -5,6 +5,12 @@ exports.onCreateWebpackConfig = ({ actions }) => {
   })
 }
 
+exports.onCreateBabelConfig = ({ actions }) => {
+  actions.setBabelPlugin({
+    name: `@loadable/babel-plugin`,
+  })
+}
+
 exports.onPreBootstrap = () => {
   console.log(`isServer? ${typeof window === "undefined"}`)
 }

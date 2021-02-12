@@ -4,6 +4,7 @@ import Header from "../components/header"
 import Footer from "../components/footer"
 //import "../styles/custom-bootstrap.scss"
 import loadable from "@loadable/component"
+import CustomBlock from "../components/dynamic/custom-block"
 
 const DynamicPage = () => {
   return (
@@ -43,7 +44,7 @@ const DynamicPage = () => {
               </ul>
             </div>
             <div className="col col-9-md container">
-              {renderComponent("dynamic")}
+              <CustomBlock customBlock={{ name: "BlockOne" }} />
             </div>
           </div>
         </div>
