@@ -14,6 +14,7 @@ const plugins = [
   "gatsby-plugin-sass",
   "gatsby-plugin-react-helmet",
   "gatsby-plugin-sitemap",
+  "gatsby-plugin-loadable-components-ssr",
   "gatsby-plugin-sharp",
   "gatsby-transformer-sharp",
   "gatsby-plugin-image",
